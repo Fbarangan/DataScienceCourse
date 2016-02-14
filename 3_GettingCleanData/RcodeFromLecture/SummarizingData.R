@@ -20,6 +20,36 @@ restData
 
 #Look at a bit of the Data
 head(restData, n =3)
-tail()
+tail(restData, n=3)
+# Make Summary
+summary(restData)
+# More in depth
+str(restData)
+#Quantiles of qualitative variables. na.rm = TRUE-> to exlude NA or missing values
+quantile(restData$councilDistrict, na.rm = TRUE)
+quantile(restData$councilDistrict, probs= c(0.5, 0.75, 0.9))
+
+#Make Table include NA's
+table(restData$zipCode, useNA = "ifany")
+table(restData$councilDistrict, restData$zipCode)
+
+#check for missing values
+sum(is.na (restData$councilDistrict))
+# will yield TRUE or FALSE
+any(is.na (restData$councilDistrict))
+all(restData$zipCode > 0)
+
+# Row and column Sums
+colSums(is.na (restData))
+all(colSums(is.na(restData)) > 0)
+
+# Value with specific characteristics
+tabel(restData$zipCode %in% c("21212"))
+
+
+
+
+
+
 
 #-----End-----
