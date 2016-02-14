@@ -18,4 +18,8 @@ download.file(fileUrl, destfile = "/Users/kfcbarangan/Desktop/DataScience/3_Gett
 restData <- read.csv("/Users/kfcbarangan/Desktop/DataScience/3_GettingCleanData/RcodeFromLecture/data/restaurant.csv")
 restData
 
+#Look at a bit of the Data
+head(restData, n =3)
+tail()
+
 #-----End-----
