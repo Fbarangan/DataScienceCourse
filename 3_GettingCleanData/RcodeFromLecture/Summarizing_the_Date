@@ -1,0 +1,14 @@
+# Summarizing the Date
+# ------Getting the Data from the Web------------------
+
+# File "Coursera/Data-Science/3.GettingAndCleaningData/Week3"
+
+if (file.exists("./Coursera/Data-Science/3.GettingAndCleaningData/Week3/data"))
+        {dir.create (".Coursera/Data-Science/3.GettingAndCleaningData/Week3/data")}
+fileUrl <- "https://data/baltimorecity.gov/Community/Restaurants/k5ry-ef3g"       
+
+download.file(fileUrl, destfile = "Coursera/Data-Science/3.GettingAndCleaningData/Week3/data/restaurant.csv",
+              method = "curl")
+restData <- read.csv("Coursera/Data-Science/3.GettingAndCleaningData/Week3/data/restaurant.csv")
+
+#-----End-----
