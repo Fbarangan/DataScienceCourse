@@ -1,4 +1,4 @@
-# Summarizing the Date
+# Summarizing the Data
 # ------Getting the Data from the Web------------------
 
 # File "/Desktop/DataScience/3_GettingCleanData/RCodesFromLecture"
