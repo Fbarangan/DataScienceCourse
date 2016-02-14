@@ -6,6 +6,6 @@
 
 - Keep adding new file until desired subfolders are created.
 - To add a file on a particular folder/subfolder, perform the same procedure above [Click new file].
-- This time add the corresponding file extension. (e.g. .R, .MD)
+- This time add the corresponding file extension. (e.g. .R,  .MD)
 - On the RStudio, execute a push command to update and copy changes into your RStudio project.
 - Work on your code and execute commit/push to update github files.
