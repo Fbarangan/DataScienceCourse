@@ -43,8 +43,37 @@ all(restData$zipCode > 0)
 colSums(is.na (restData))
 all(colSums(is.na(restData)) > 0)
 
-# Value with specific characteristics
-tabel(restData$zipCode %in% c("21212"))
+# Value with specific characteristics. Will return a TRUE and FALSE value
+table(restData$zipCode %in% c("21212"))
+table(restData$zipCode %in% c("21212", "21213"))
+
+# Will return allrow with 21212 and 21213 in colum Zipcode
+restData[restData$zipCode %in% c("21212", "21213"),]
+
+# Cross Tabs  where's the data??
+data(UCBAdmissions)
+DF = as.data.frame(UCBadmissions)
+summary(DF)
+
+xt <- xtab (Freg ~ Gender + Admit, data=DF)
+xt
+
+#Flat Tables
+warpbreaks$replicate <- rep(1:9, len = 54)
+xt = xtab(breaks ~. , data = warpbreaks)
+
+ftable(xt)
+
+# Size of data set
+fakeData = rnorm(1e5)
+object.size(fakeData)
+
+print(object.size(fakeData), units = "Mb)
+
+
+
+
+
 
 
 
