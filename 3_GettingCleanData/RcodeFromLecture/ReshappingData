@@ -1,0 +1,56 @@
+# Reshapping data
+# The goal is tidy data
+# Each variable form a column
+# Each observation forms a row
+# each table/file stores data one kind of observation (e.g) people/hospitals.
+
+# Get data from  "http://vita.had.co.nz/papers/tidy-data.pdf"
+
+# Start with reshapping
+intall.packages(reshape2)
+library(reshape2)
+
+head(mtcars)
+
+# Melting data frames
+carMelt <- melt(mtcars, id= c("carname", "gear", "cyl"), measure.vars = c("mpg", "hp"))
+head(carMelt, n = 3)
+tail(carMelt, n=3)
+
+# Casting Data frames
+
+cylData <- dcast(carMelt, cyl ~ variable)
+cylData
+
+# Averaging Values
+(head(InsectSprays)
+
+tapply(InsectSpray$count, InsectSpray$spray, sum)
+
+# Another way - split
+
+spIns = split(InsectSpray$count, InsectSpray$spray)
+spIns
+
+# Another way - apply
+sprCount = lapply(spIns, sum)
+sprCount
+
+# Another way - combine
+unlist(sprCount)
+
+sapply(spIns, sum)
+
+# Another way - plyr package
+install.packages("plyr")
+library(plyr)
+
+ddply(InsectSprays, .(spray), summarize, sum = sum(count))
+
+# Creating a new variable
+spraySums <- ddply (InsectSprays, .(spray), summarize, sum = ave(count, FUN = sum))
+
+head(spraySums)
+
+#-----End-----
+
