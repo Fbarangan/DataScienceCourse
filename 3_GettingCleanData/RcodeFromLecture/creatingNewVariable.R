@@ -23,7 +23,7 @@ s1 <- seq(1,10, by = 2) ; S1
 s2 <- seq(1,10 length = 3) ; s2
 
 x <- c(1,3,25,100); seq(along = x)
-  # Dont' know why the outpu is " [1] 1 2 3 4 5  
+  # Dont' know why the outpu is " [1] 1 2 3 4 5
 
 #Subsetting variables
 # Will return and count number of TRUE and FALSE
@@ -35,16 +35,17 @@ table(restData$nearMe)
 
 # Will return a table , TRUE or FALSE value and its count
  table(restData$zipWrong, restData$zipCode <0)
- 
+
 # Creating categorical variables
 
 restData$zipGroups  = cut(restData$zipCode, breaks = quantile (restData$zipCode))
 table(restData$zipGroups)
 
-# When table is first variable in the function is the rows; the second value are the columns 
+# When table is first variable in the function is the rows; the second value are the columns
 table(restData$zpGroups, restData$zipCode)
 
 # Easier cutting
+install.packages("Hmisc")
 library(Hmisc)
 
 restData$zipgroups = cut2(restData$zipCode, g = 4)
