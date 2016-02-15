@@ -50,7 +50,7 @@ library(Hmisc)
 
 restData$zipgroups = cut2(restData$zipCode, g = 4)
 table(restData$zipGroups)
-
+#Add
 
 
 
