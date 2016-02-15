@@ -50,7 +50,42 @@ library(Hmisc)
 
 restData$zipgroups = cut2(restData$zipCode, g = 4)
 table(restData$zipGroups)
-#Add
+
+# Creating factor variable
+restData$zcf <- factor(restData$zipCode)
+restData$zcf
+class(restData$zcf)
+
+# Level of factor variables
+yesno <- sample(c("yes", "no"), size = 10, replace = TRUE )
+yesnofac = factor(yesno, level = c("yes", "no"))
+relevel(yesnofac, ref = "yes")
+
+as.numeric(yesnofac)
+
+# Cutting produces factor variable
+library(Hmisc)
+
+restData$zipGroups = cut2(restData$zipCode, g=4)
+table(restData$zipGroups)
+
+# Using the mutate function
+library(dplyr)
+restData2 = mutate(restData, zipGroups = cut2(zipCode, g=4))
+
+# Common Transform
+# avs(x) absolute value
+
+# sqrt(x) square root
+
+# ceiling(x) ceiling(3.475) is 4
+
+# floor(x) floor(3.475) is 4
+
+# round(x, digits = n)  round(3.475, digits = 2) is 3.48
+
+# signif (x, digits = n ) signif (3.475, digits = 2) is 3.5
+
 
 
 
