@@ -7,14 +7,14 @@
 #
 #
 library(dplyr)
-if(!file.exists("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes"))
-{dir.create("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes")}
+if(!file.exists("/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes"))
+{dir.create("/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes")}
 
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv"
-destfile <- "/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/GRP.csv"
+destfile <- "/Users/`/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/GRP.csv"
 
 GDP <- download.file(fileUrl, destfile = destfile)
-GDP <- read.csv("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/GRP.csv", stringsAsFactors = FALSE , header = FALSE)
+GDP <- read.csv("/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/GRP.csv", stringsAsFactors = FALSE , header = FALSE)
 
 
 
@@ -47,11 +47,11 @@ View(GDPStripDFSelect)
 
 #
 # Educational Data
-if(!file.exists("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes"))
-{dir.create("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes")}
+if(!file.exists("/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes"))
+{dir.create("/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes")}
 
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv"
-destfile <- "/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/EDU.csv"
+destfile <- "/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/EDU.csv"
 
 EDU <- download.file(fileUrl, destfile = destfile)
 EDU <- read.csv(destfile, stringsAsFactors = FALSE, header = FALSE )
