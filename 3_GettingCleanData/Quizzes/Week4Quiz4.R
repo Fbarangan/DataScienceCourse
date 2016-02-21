@@ -7,3 +7,49 @@
 #Original data source  http://data.worldbank.org/data-catalog/GDP-ranking-table
 #                       http://data.worldbank.org/data-catalog/ed-stats
 
+#File creation
+if(!file.exists("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes"))
+{dir.create("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes")}
+
+fileUrlGDP <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv"
+fileUrlEDStats <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv"
+
+GDPRaw <- download.file(fileUrlGDP, destfile = "/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/GDPRaw.csv")
+
+EDStatsPRaw <- download.file(fileUrlEDStats, destfile = "/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/EDStatsRaw.csv")
+
+# GDP Data info
+GDP <- read.csv("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/GDPRaw.csv", stringsAsFactors = FALSE, header = FALSE)
+
+GDPHeaders <- GDP <- read.csv("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/GDPRaw.csv")
+
+names(GDP)
+names(GDPHeaders)
+# rename header
+colnames(GDP)[1] = "countrycode"
+
+# EDUStats
+
+EDUStat <- read.csv("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/EDStatsRaw.csv", stringsAsFactors = FALSE, header = FALSE)
+
+EDUStatHeaders <- read.csv("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/EDStatsRaw.csv")
+
+names(EDUStat)
+names(EDUStatHeaders)
+#rename CountryCode to countrycode
+colnames(EDUStat)[1] = "countrycode"
+colnames(EDUStat)[10] = "specialnotes"
+
+# combine 2 table
+GDPEDUCombined <- merge(GDP, EDUStat, by = "countrycode" )
+
+# will pull all with word "Fiscal" and June
+FiscalYearJune <- grep("[Ff]iscal | [Jj]une", GDPEDUCombined$specialnotes)
+
+#
+FiscalYearJune <- grep("Fiscal year end: June", GDPEDUCombined$specialnotes)
+
+FiscalYearJuneNumber <-  length(FiscalYearJune)
+FiscalYearJuneNumber
+
+#---End-----
