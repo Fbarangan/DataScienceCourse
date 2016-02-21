@@ -8,20 +8,20 @@
 #                       http://data.worldbank.org/data-catalog/ed-stats
 
 #File creation
-if(!file.exists("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes"))
-{dir.create("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes")}
+if(!file.exists("/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes"))
+{dir.create("/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes")}
 
 fileUrlGDP <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv"
 fileUrlEDStats <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv"
 
-GDPRaw <- download.file(fileUrlGDP, destfile = "/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/GDPRaw.csv")
+GDPRaw <- download.file(fileUrlGDP, destfile = "/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/GDPRaw.csv")
 
-EDStatsPRaw <- download.file(fileUrlEDStats, destfile = "/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/EDStatsRaw.csv")
+EDStatsPRaw <- download.file(fileUrlEDStats, destfile = "/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/EDStatsRaw.csv")
 
 # GDP Data info
-GDP <- read.csv("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/GDPRaw.csv", stringsAsFactors = FALSE, header = FALSE)
+GDP <- read.csv("/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/GDPRaw.csv", stringsAsFactors = FALSE, header = FALSE)
 
-GDPHeaders <- GDP <- read.csv("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/GDPRaw.csv")
+GDPHeaders <- GDP <- read.csv("/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/GDPRaw.csv")
 
 names(GDP)
 names(GDPHeaders)
@@ -30,9 +30,9 @@ colnames(GDP)[1] = "countrycode"
 
 # EDUStats
 
-EDUStat <- read.csv("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/EDStatsRaw.csv", stringsAsFactors = FALSE, header = FALSE)
+EDUStat <- read.csv("/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/EDStatsRaw.csv", stringsAsFactors = FALSE, header = FALSE)
 
-EDUStatHeaders <- read.csv("/Users/kfcbarangan/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/EDStatsRaw.csv")
+EDUStatHeaders <- read.csv("/Users/~/Desktop/DataScienceCourse/3_GettingCleanData/Quizzes/EDStatsRaw.csv")
 
 names(EDUStat)
 names(EDUStatHeaders)
