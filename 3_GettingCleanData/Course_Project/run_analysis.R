@@ -18,7 +18,15 @@ test <- read.table("/paste you PATH here/test/X_test.txt")
 test <- read.table("/paste you PATH here/test/Y_test.txt")
 testSubject <- read.table("/paste you PATH here/test/subject_test.txt")
 
-#     
+# read train folder
+#    train folder ( test folder :  X-test,  y_test, subject_test ). Make sure to plug in correct path of the files
+training <- read.table("/paste you PATH here/train/X_train.txt")
+trainingLabel <- read.table("/paste you PATH here/train/Y_train.txt")
+trainingSubject <- read.table("/paste you PATH here/train/subject_train.txt")
+
+# read supporting labels folder ( features and activity)
+features <- read.table("/paste you PATH here/features.txt")
+activityLabel <- read.table(""/paste you PATH here/activity_labels.txt")
 
 
        
