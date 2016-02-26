@@ -15,18 +15,25 @@ fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%2
 #     test folder ( test folder :  X-test,  y_test, subject_test ). Make sure to plug in correct path of the files
 
 test <- read.table("/paste you PATH here/test/X_test.txt")
-test <- read.table("/paste you PATH here/test/Y_test.txt")
-testSubject <- read.table("/paste you PATH here/test/subject_test.txt")
+testActivities <- read.table("/paste you PATH here/test/Y_test.txt")
+testVolunteer <- read.table("/paste you PATH here/test/subject_test.txt")
 
 # read train folder
 #    train folder ( test folder :  X-test,  y_test, subject_test ). Make sure to plug in correct path of the files
 training <- read.table("/paste you PATH here/train/X_train.txt")
-trainingLabel <- read.table("/paste you PATH here/train/Y_train.txt")
-trainingSubject <- read.table("/paste you PATH here/train/subject_train.txt")
+trainingActivities <- read.table("/paste you PATH here/train/Y_train.txt")
+trainingVolunteer <- read.table("/paste you PATH here/train/subject_train.txt")
 
 # read supporting labels folder ( features and activity)
-features <- read.table("/paste you PATH here/features.txt")
-activityLabel <- read.table(""/paste you PATH here/activity_labels.txt")
+featuresVariables <- read.table("/paste you PATH here/features.txt")
+activityNames <- read.table(""/paste you PATH here/activity_labels.txt")
+
+# Cleaning the  "festure table and removing excessive "()" using gsub replacing it with empty space just on column V2
+# Will leave the rest of the naming convention for the features.
+featuresVariable <- gsub("\\()", "", featuresVariable$V2)
+
+# Cleaning the 
+
 
 
        
