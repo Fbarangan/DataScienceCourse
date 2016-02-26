@@ -32,8 +32,20 @@ activityNames <- read.table(""/paste you PATH here/activity_labels.txt")
 # Will leave the rest of the naming convention for the features.
 featuresVariable <- gsub("\\()", "", featuresVariable$V2)
 
-# Cleaning the 
+# Cleaning the activityNames table: changing into lowercase, removal of "_"
+activityNames <- sub("_", " ", activityNames$V2)
+activityNames <- tolower(activityNames$V2)
 
+# Coerce and convert activity name back into a data frame which will be use to merge with the test/train data labeling
+# add it back into a data fram
+ActivityCode <- c(1:6)
+activityNames <- cbind(ActivityCode, activityNames)
+activityNames <- as.data.frame(activityNames)
+
+# Convert the variable name of the test and training data into a meaningful names
+# Will relace it from the features name which both equal to 561 variables.
+names(test) <- features
+names(training) <- features
 
 
        
