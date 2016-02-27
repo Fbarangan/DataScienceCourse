@@ -1,0 +1,61 @@
+---
+Title: "Course_Project"
+Author: "Felix Barangan, MS, RN, MLS (ASCP)^cm^"       
+Date: "February 24, 2016"
+output: html_document
+---
+## Code Book: Human Activity Recognition Using Smartphone Data Set        
+### Brief Synopsis of the study
+The authors carried out an experiment on various human activities using the smartphone's (Samsung Galaxy S II). 70% of the volunteers were selected as the training data and 30% were selected for the test data.
+These activities includes:
+
+  1. walking
+  2. walking upstairs
+  3. walking downstairs
+  4. sitting
+  5. standing
+  6. laying
+        
+Using the smartphone's embedded accelerometer and gyroscope, the authors were able to record dataset with a total of 561- feature vector variables. Sample variable includes.
+
+  1.  "tBodyAcc-mean-X"
+  2.  "tBodyAcc-energy-X" 
+  3.  "tBodyAcc-entropy-X" 
+  4.  "tGravityAcc-mean-X"      
+
+### Data Dictionary
+Folder hierarchy after unzipping the file from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+  * test folder 
+  
+        +  X-test which contains - 2947 obs of 561 variables           
+        +  y_test which contains - 2497 obs of 1 variable (activities in # e.g. 1,2,3,4,5,6)
+        +  subject_test contains - 2947 obs of 1 variable (This is the designated # of volunteer)
+
+  * train folder
+        
+        + X_train which contains - 7352 obs of 561 variables
+        + y_train which contains - 7352 obs of 1 variable (activities in # e.g. 1,2,3,4,5,6)
+        + subject_train contains - 7352 obs of 1 variable (This is the designated # of volunteer)
+        
+  * features    
+  
+        + features - character class vectors of [1:561].These are the abovementioned 561- feature vector variables
+
+  * activity_labels
+        
+        + A character class vector of [1:6]. These are names of activity during the experiment.
+                
+For additional information on this experiment click on the link below
+                http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+        
+### Source:
+
+Jorge L. Reyes-Ortiz(1,2), Davide Anguita(1), Alessandro Ghio(1), Luca Oneto(1) and Xavier Parra(2)
+1 - Smartlab - Non-Linear Complex Systems Laboratory
+DITEN - Università degli Studi di Genova, Genoa (I-16145), Italy.
+2 - CETpD - Technical Research Centre for Dependency Care and Autonomous Living
+Universitat Politècnica de Catalunya (BarcelonaTech). Vilanova i la Geltrú (08800), Spain
+activityrecognition '@' smartlab.ws 
+                
+
