@@ -1,0 +1,48 @@
+---
+title: "ReadME"
+Author: "Felix Barangan, MS, RN, MLS (ASCP)^cm^"       
+Date: "February 24, 2016"
+output: html_document
+---
+
+## Rubric for the "Getting and Cleaning Data" Course Project
+
+###   The submitted data set is tidy
+
+        * Clone repository in your local machine including all the necessary
+          files.
+        * Make sure R and R studio are in the correct working directory.
+           replace the  directory and folder on the code to reflect your local
+           machines directory
+         
+           read.table("/Users/~/Desktop/Coursera/Data-Science/data/Dataset/test/X_test.txt")
+         
+        * Make to sure to unzip downloaded file
+        * Load library(dplyr)   
+        * For detailed information, please see code book file.
+        * the final output is 
+ 
+Click link  [ https://www.youtube.com/watch?v=8SGif63VW6E]. for further information click link below
+
+### Merging , then extracting variables == "mean" and "std"
+        This test data will be merge into 1 data frame (tbl_df)
+        +  X-test which contains - 2947 obs of 561 variables           
+        +  y_test which contains - 2497 obs of 1 variable (activities in # e.g. 1,2,3,4,5,6)
+        +  subject_test contains - 2947 obs of 1 variable (This is the designated # of volunteer)
+
+      This train data will be merged into 1 data frame (tbl_df)
+        + X_train which contains - 7352 obs of 561 variables
+        + y_train which contains - 7352 obs of 1 variable (activities in # e.g. 1,2,3,4,5,6)
+        + subject_train contains - 7352 obs of 1 variable (This is the designated # of volunteer)
+        
+The above 2 tables will then merge into 1 table using the rbind
+
+### Uses descriptive activity names with descriptive variable names
+       
+        + Clean variable and row names by removing unwanted spaces,()
+        + Merge the activity_labels to have meaningful activity instea of numeric
+
+### Create new data frame for another indepedent analysis 
+
+        + Group by activity by volunteer
+        + showed the mean of those 79 variables/column selected == "mean" and "sd"
