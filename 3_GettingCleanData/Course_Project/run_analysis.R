@@ -9,7 +9,7 @@ library(dplyr)
 if (!file.exists("paste you PATH here"))
         {dir.create("paste you PATH here")}
 
-# File assignment. Mke sure to back to that file/folder and unzip file. see ReadMe file for details.
+# File assignment. Make sure to go back to that file/folder and unzip file. see ReadMe file for details.
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 #------------------------------------
 
